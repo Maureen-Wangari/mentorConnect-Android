@@ -3,24 +3,22 @@ package com.akirachix.mentor_connect
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import android.view.textclassifier.TextLinks.TextLink
-import android.widget.Button
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class MainActivity : AppCompatActivity() {
-    @SuppressLint("MissingInflatedId")
+class login_Page : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        val Login=findViewById<TextView>(R.id.Login)
-        Login.setOnClickListener {
-            val intent = Intent( this,login_Page::class.java)
+        enableEdgeToEdge()
+        setContentView(R.layout.activity_login_page)
+        val signUp=findViewById<TextView>(R.id.signUp)
+        signUp.setOnClickListener {
+            val intent = Intent( this,MainActivity::class.java)
             startActivity(intent)
         }
-}
+        }
     }
